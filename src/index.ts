@@ -1,9 +1,22 @@
-export const getRouteSegments = (pathname: string) => {
-  const segments = pathname.split('/').filter((segment) => segment || segment === '');
+export interface RouteSegment {
+  slug: string;
+  url: string;
+  name: string;
+}
+
+export const getRouteSegments = (pathname: string): RouteSegment[] => {
+  const segmentsSet = new Set<string>();
+  pathname.split('/').filter((segment) => {
+    if (segment || segment === '') {
+      segmentsSet.add(segment);
+      return true;
+    }
+    return false;
+  });
   
-  return segments.map((segment, index) => {
+  return Array.from(segmentsSet).map((segment, index) => {
     const slug = segment || 'home';
-    const urlSegments = segments.slice(0, index + 1);
+    const urlSegments = Array.from(segmentsSet).slice(0, index + 1);
     const url = urlSegments.length > 1 ? `${urlSegments.join('/')}` : '/';
     const name = segment
       ? segment
