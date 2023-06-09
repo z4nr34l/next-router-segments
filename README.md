@@ -9,10 +9,11 @@ example for creating breadcrumbs for current page.
 
 ### Next.js (App Router)
 
-```tsx{:copy}
+```tsx
 "use client";
 
 import usePathname from "next/navigation";
+import { getRouteSegments } from 'next-router-segments';
 
 export default function Page() {
   const {pathname} = usePathname();
@@ -30,8 +31,9 @@ Info: pathname is only available in client, so usage for client component and cl
 
 ### Next.js (Pages Router)
 
-```tsx{:copy}
+```tsx
 import useRouter from "next/router";
+import { getRouteSegments } from 'next-router-segments';
 
 export default function Page() {
   const {pathname} = useRouter();
