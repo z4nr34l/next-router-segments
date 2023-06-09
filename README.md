@@ -5,6 +5,26 @@
 I've made this package for parsing Next.js `pathname` to structured segments, which you can use in various ways, for
 example for creating breadcrumbs for current page.
 
+## Installation
+
+### PNPM
+
+```bash
+pnpm add next-router-segments
+```
+
+### NPM
+
+```bash
+npm i next-router-segments
+```
+
+### YARN
+
+```bash
+yarn add next-router-segments
+```
+
 ## Usage
 
 ### Next.js (App Router)
