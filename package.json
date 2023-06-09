@@ -2,10 +2,11 @@
   "name": "next-router-segments",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
   "files": [
     "lib/**/*"
   ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
