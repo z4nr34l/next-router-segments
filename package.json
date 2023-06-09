@@ -1,6 +1,6 @@
 {
   "name": "next-router-segments",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Parsing Next.js pathname to structured segments, which you can use in various ways.",
   "files": [
     "lib/**/*"
