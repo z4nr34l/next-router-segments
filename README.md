@@ -26,7 +26,7 @@ export default function Page() {
 }
 ```
 
-{% Info: pathname is only available in client, so usage for client component and client pages is exacly same. %}
+Info: pathname is only available in client, so usage for client component and client pages is exacly same.
 
 ### Next.js (Pages Router)
 
