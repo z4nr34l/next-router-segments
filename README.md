@@ -36,7 +36,7 @@ import usePathname from "next/navigation";
 import { getRouteSegments } from 'next-router-segments';
 
 export default function Page() {
-  const {pathname} = usePathname();
+  const pathname = usePathname();
   const segments = getRouteSegments(pathname)
   
   return (
@@ -65,4 +65,26 @@ export default function Page() {
     </pre>
   )
 }
+```
+
+### Example object returend by getRouteSegments
+
+```js
+[
+  {
+    slug: "home",
+    url: "/",
+    name: "Home"
+  },
+  {
+    slug: "sales",
+    url: "/example",
+    name: "Sales"
+  },
+  {
+    slug: "settings",
+    url: "/example/settings",
+    name: "Settings"
+  }
+]
 ```
